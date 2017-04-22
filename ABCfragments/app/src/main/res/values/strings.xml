@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">ABCfragments</string>
+    <string name="button_switch_to_c1">Activate increase button</string>
+    <string name="button_switch_to_c2">Activate decrease button</string>
+    <string name="button_decrease">Decrease</string>
+    <string name="button_increase">Increase</string>
+    <string name="text_view_counter">Counter</string>
+</resources>
