@@ -61,32 +61,8 @@ public class C1Fragment extends Fragment {
         super.onSaveInstanceState(outState);
     }
 
-        //@Override
-//    public void onStart() {
-//        super.onStart();
-//
-//        Log.d(LOG_TAG, "counter in c1 is"+mCount);
-//
-//        Bundle args = getArguments();
-//        if (args != null) {
-//            mCount = args.getInt(ARG_COUNT);
-//        }
-//
-//    }
-
     public void updateCounter(int count) {
         mCount = count;
     }
-
-//    @Override
-//    public void onViewStateRestored(Bundle savedInstanceState) {
-//
-//        super.onViewStateRestored(savedInstanceState);
-//
-//        // Restore UI state from the savedInstanceState.
-//        // This bundle has also been passed to onCreate.
-//
-//        mCount = savedInstanceState.getInt(ARG_COUNT);
-//    }
 }
 

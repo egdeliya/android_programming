@@ -7,7 +7,7 @@ import android.provider.BaseColumns;
  */
 
 public class TaskContract {
-    public static final String DB_NAME = "com.delya.todolist.db";
+    public static final String DB_NAME = "com.example.delya.todolist.db";
     public static final int DB_VERSION = 1;
 
     public class TaskEntry implements BaseColumns {

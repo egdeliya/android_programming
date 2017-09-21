@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.delya.todolist">
-
-    <!--# разрешение на чтение и запись в календарь-->
-    <uses-sdk android:minSdkVersion="14" />
-    <uses-permission android:name="android.permission.READ_CALENDAR"/>
-    <uses-permission android:name="android.permission.WRITE_CALENDAR"/>
+    package="com.example.delya.trysql">
 
     <application
         android:allowBackup="true"

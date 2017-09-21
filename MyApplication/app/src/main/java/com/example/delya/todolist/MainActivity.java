@@ -20,7 +20,6 @@ import com.example.delya.todolist.db.TaskContract;
 import com.example.delya.todolist.db.TaskDbHelper;
 
 import java.util.ArrayList;
-import java.util.StringTokenizer;
 
 public class MainActivity extends AppCompatActivity {
     private static final String TAG = "MainActivity";
@@ -34,7 +33,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         mHelper = new TaskDbHelper(this);
-        mTaskListView = (ListView)findViewById(R.id.list_todo);
+
+        // ListView - прокручиваемый список
+        // получаем экземпляр элемента ListView
+        mTaskListView = (ListView) findViewById(R.id.list_todo);
 
         updateUI();
 
@@ -67,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
         db.close();
     }
 
-
+    // создание меню
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.main_menu, menu);
@@ -83,7 +85,7 @@ public class MainActivity extends AppCompatActivity {
                         .setTitle("Add a new task")
                         .setMessage("What do you want to do next?")
                         .setView(taskEditText)
-                        .setPositiveButton("Add", new DialogInterface.OnClickListener() {
+                        .setPositiveButton("Добавить", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
                                 String task = String.valueOf(taskEditText.getText());
@@ -98,7 +100,7 @@ public class MainActivity extends AppCompatActivity {
                                 db.close();
                             }
                         })
-                        .setNegativeButton("Cancel", null)
+                        .setNegativeButton("Отмена", null)
                         .create();
                 dialog.show();
                 return true;
@@ -120,4 +122,8 @@ public class MainActivity extends AppCompatActivity {
         updateUI();
     }
 
+    //TODO
+    public void editTask(View view) {
+
+    }
 }
