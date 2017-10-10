@@ -53,6 +53,15 @@
             android:layout_gravity="center_horizontal"
             android:inputType="number"/>
 
+        <TextView
+            android:id="@+id/result"
+            android:layout_width="98dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="50dp"
+            android:text="Result"
+            android:gravity="center"
+            android:layout_gravity="center_horizontal" />
+
         <Button
             android:id="@+id/equals_btn"
             android:layout_marginTop="50dp"
@@ -62,14 +71,7 @@
             android:text="="
             />
 
-        <TextView
-            android:id="@+id/result"
-            android:layout_width="98dp"
-            android:layout_height="25dp"
-            android:layout_marginTop="50dp"
-            android:text="result"
-            android:gravity="center"
-            android:layout_gravity="center_horizontal" />
+
     </LinearLayout>
 
 </LinearLayout>

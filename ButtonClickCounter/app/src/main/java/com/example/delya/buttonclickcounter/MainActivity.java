@@ -16,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText enterNumEditText;
     private TextView showResult;
     private String TAG = "MainActivity";
+    protected static String ARG_COUNT = "0";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +29,11 @@ public class MainActivity extends AppCompatActivity {
         enterNumEditText = (EditText) findViewById(R.id.enterNum);
         showNum = (TextView) findViewById(R.id.showNum);
         showResult = (TextView) findViewById(R.id.result);
+
+        if (savedInstanceState != null) {
+            counter = savedInstanceState.getInt(ARG_COUNT);
+            showNum.setText(""+counter);
+        }
 
         btn_increase.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -60,4 +66,11 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
-    }}
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        outState.putInt(ARG_COUNT, counter);
+        super.onSaveInstanceState(outState);
+    }
+}
