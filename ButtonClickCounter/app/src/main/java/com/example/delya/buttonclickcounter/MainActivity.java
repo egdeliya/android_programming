@@ -38,8 +38,8 @@ public class MainActivity extends AppCompatActivity {
         btn_increase.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                counter++;
-                showNum.setText("" + counter);
+            counter++;
+            showNum.setText("" + counter);
             }
         });
 
