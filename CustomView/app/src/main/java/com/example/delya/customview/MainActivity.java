@@ -1,15 +1,13 @@
-package com.example.delya.loginfragmentswork;
+package com.example.delya.customview;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class FragmentActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getSupportActionBar().hide();
-
-        setContentView(R.layout.activity_fragment);
+        setContentView(R.layout.activity_main);
     }
 }
