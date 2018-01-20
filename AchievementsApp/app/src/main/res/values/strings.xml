@@ -1,6 +1,0 @@
-<resources>
-    <string name="app_name">AchievementsApp</string>
-
-    <!--ключ нашего приложения для вконтакте-->
-    <string name="vk_app_id">6162829</string>
-</resources>

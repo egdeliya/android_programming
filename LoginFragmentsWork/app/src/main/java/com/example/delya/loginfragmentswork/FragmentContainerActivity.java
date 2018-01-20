@@ -48,7 +48,7 @@ public class FragmentContainerActivity extends AppCompatActivity
             trans.commit();
 
         } else {
-            PhoneFieldFragment newPhoneFldFrg= new PhoneFieldFragment();
+            PhoneFieldFragment newPhoneFldFrg = new PhoneFieldFragment();
 
             trans.replace(mActionFragmentId, actionFragment, "Send sms fragment");
             trans.replace(mPhoneFieldFragmentId, newPhoneFldFrg,

@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="app_name">ABCfragments</string>
-    <string name="button_switch_to_c1">Увеличить счётчик</string>
-    <string name="button_switch_to_c2">Уменьшить счётчик</string>
-    <string name="button_decrease">Уменьшить</string>
-    <string name="button_increase">Увеличить</string>
-    <string name="text_view_counter">Counter</string>
-</resources>

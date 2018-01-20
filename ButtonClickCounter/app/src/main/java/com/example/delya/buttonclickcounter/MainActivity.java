@@ -9,6 +9,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.math.BigInteger;
+
 public class MainActivity extends AppCompatActivity {
 
     private int counter = 0;
@@ -38,8 +40,10 @@ public class MainActivity extends AppCompatActivity {
         btn_increase.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-            counter++;
-            showNum.setText("" + counter);
+            if (counter != Integer.MAX_VALUE - 1) {
+                counter++;
+                showNum.setText("" + counter);
+            }
             }
         });
 
@@ -60,12 +64,20 @@ public class MainActivity extends AppCompatActivity {
                     String input = enterNumEditText.getText().toString();
                     Log.d(TAG, "input is "+input);
                     int num = Integer.parseInt(input);
-                    showResult.setText("" + (counter * num));
+                    if (check_arg_correct(num)) {
+                        showResult.setText("" + (counter * num));
+                    } else {
+                        showResult.setText("wrong input");
+                    }
                 } catch (NumberFormatException e) {
                     showResult.setText("wrong input");
                 }
             }
         });
+    }
+
+    private boolean check_arg_correct(int num) {
+        return (Integer.MAX_VALUE / num >= counter);
     }
 
     @Override
